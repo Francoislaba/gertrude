@@ -51,6 +51,10 @@ jours_fermeture.append(("15 août", lambda year: datetime.date(year, 8, 15), Tru
 jours_fermeture.append(("1er novembre", lambda year: datetime.date(year, 11, 1), True))
 jours_fermeture.append(("11 novembre", lambda year: datetime.date(year, 11, 11), True))
 jours_fermeture.append(("25 décembre", lambda year: datetime.date(year, 12, 25), True))
+# Jours fériés Alsace-Moselle
+jours_fermeture.append(("26 décembre", lambda year: datetime.date(year, 12, 26), False))
+jours_fermeture.append(("Vendredi de Pâques", lambda year: getPaquesDate(year) + datetime.timedelta(-2), False))
+# Fin des Jours fériés Alsace-Moselle
 jours_fermeture.append(("Lundi de Pâques", lambda year: getPaquesDate(year) + datetime.timedelta(1), True))
 jours_fermeture.append(("Jeudi de l'Ascension", lambda year: getPaquesDate(year) + datetime.timedelta(39), True))
 jours_fermeture.append(("Lundi de Pentecôte", lambda year: getPaquesDate(year) + datetime.timedelta(50), False))
